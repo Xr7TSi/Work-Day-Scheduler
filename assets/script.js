@@ -3,6 +3,7 @@
 // use bootstrap to build time blocks
 var showCurrentDay = document.getElementById("showCurrentDay")
 var dayIndex = moment().day()
+var currentHour = moment().format("ha")
 
 
 
@@ -31,3 +32,5 @@ function showDayOfWeek()
     } 
     showCurrentDay.textContent = todayIs;
 } showDayOfWeek()
+
+

@@ -22,9 +22,7 @@ var fivePm = document.getElementById("fivePm");
 
 
 
-var nineAmEl = "Banana"
-
-// $('input[name="nineAmInput"]')
+var nineAmEl = $('input[name="nineAmInput"]');
 
 
 submitBtn.on('click', function () {

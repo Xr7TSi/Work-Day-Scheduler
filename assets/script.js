@@ -1,6 +1,10 @@
 // used for day of week display
 var showCurrentDay = document.getElementById("showCurrentDay");
 var dayIndex = moment().day();
+
+// gets submit button from html
+var submitBtn = $('#submitBtn');
+
 // used for background color management
 var currentHour = moment().format("ha");
 var currentHourIndex = moment().hour();
@@ -14,12 +18,23 @@ var threePm = document.getElementById("threePm");
 var fourPm = document.getElementById("fourPm"); 
 var fivePm = document.getElementById("fivePm"); 
 
-var nineAmInput = $("#nineAm").val();
 
-// nineAm.value returns the value correctly.  How do I turn that value into a variable?
 
-// sets user input to local storage
-// localStorage.setItem("nineAmValue", JSON.stringify(nineAM.value));
+
+
+var nineAmEl = "Banana"
+
+// $('input[name="nineAmInput"]')
+
+
+submitBtn.on('click', function () {
+    // sets user input to local storage
+    localStorage.setItem("nineAmValue", JSON.stringify(nineAmEl));
+  });
+
+
+
+
 
 
 // displays current day of week

@@ -14,7 +14,9 @@ var threePm = document.getElementById("threePm");
 var fourPm = document.getElementById("fourPm"); 
 var fivePm = document.getElementById("fivePm"); 
 
+var nineAmInput = $("#nineAm").val();
 
+// nineAm.value returns the value correctly.  How do I turn that value into a variable?
 
 // sets user input to local storage
 // localStorage.setItem("nineAmValue", JSON.stringify(nineAM.value));

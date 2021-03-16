@@ -22,16 +22,21 @@ var fivePm = document.getElementById("fivePm");
 
 
 
-var nineAmEl = $('input[name="nineAmInput"]');
-
-
-submitBtn.on('click', function () {
-    // sets user input to local storage
-    localStorage.setItem("nineAmValue", JSON.stringify(nineAmEl));
-  });
 
 
 
+// submitBtn.on('click', function () {
+//     var nineAmEl = $('input[name="nineAmInput"]');
+//     // sets user input to local storage
+//     localStorage.setItem("nineAmValue", JSON.stringify(nineAmEl));
+//   });
+
+
+  submitBtn.on('click', function () {    // sets user input to local storage   
+    var nineAmEl = $("#nineAm").val(); 
+    console.log(nineAmEl)
+    localStorage.setItem("nineAmValue", JSON.stringify(nineAmEl));  
+    });
 
 
 

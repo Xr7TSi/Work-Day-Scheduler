@@ -1,8 +1,11 @@
-// use jquery switch class effect to change hour color for past, resent and future
-// consider jquery buttons to submit user data to local storage 
-// use bootstrap to build time blocks
+// used for day of week display
 var showCurrentDay = document.getElementById("showCurrentDay");
 var dayIndex = moment().day();
+
+// gets submit button from html
+var submitBtn = $('.submitBtn');
+
+// used for background color management
 var currentHour = moment().format("ha");
 var currentHourIndex = moment().hour();
 var nineAm = document.getElementById("nineAm");
@@ -16,14 +19,29 @@ var fourPm = document.getElementById("fourPm");
 var fivePm = document.getElementById("fivePm"); 
 
 
+// sends user data to local storage on click
+submitBtn.on('click', function () {    // sets user input to local storage   
+    var nineAmEl = $("#nineAm").val(); 
+    var tenAmEl = $("#tenAm").val(); 
+    var elevenAmEl = $("#elevenAm").val(); 
+    var twelvePmEl = $("#twelvePm").val(); 
+    var onePmEl = $("#onePm").val(); 
+    var twoPmEl = $("#twoPm").val(); 
+    var threePmEl = $("#threePm").val(); 
+    var fourPmEl = $("#fourPm").val(); 
+    var fivePmEl = $("#fivePm").val(); 
+     
 
-
-
-
-
-// sets user input to local storage
-// localStorage.setItem("nineAmValue", JSON.stringify(nineAM.value));
-
+    localStorage.setItem("nineAmValue", JSON.stringify(nineAmEl));  
+    localStorage.setItem("tenAmValue", JSON.stringify(tenAmEl));
+    localStorage.setItem("elevenAmValue", JSON.stringify(elevenAmEl));
+    localStorage.setItem("twelvePmValue", JSON.stringify(twelvePmEl));      
+    localStorage.setItem("onePmValue", JSON.stringify(onePmEl)); 
+    localStorage.setItem("twoPmValue", JSON.stringify(twoPmEl)); 
+    localStorage.setItem("threePmValue", JSON.stringify(threePmEl)); 
+    localStorage.setItem("fourPmValue", JSON.stringify(fourPmEl)); 
+    localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl)); 
+    });
 
 
 
@@ -53,7 +71,6 @@ function showDayOfWeek()
     } 
     showCurrentDay.textContent = todayIs;
 } showDayOfWeek()
-
 
 
 // sets background color based on time
@@ -141,3 +158,4 @@ function checkHour17() {
         fivePm.style.backgroundColor = "#AAAA"
     } else (fivePm.style.backgroundColor = "#84d23c")
 }; checkHour17() 
+

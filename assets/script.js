@@ -1,8 +1,7 @@
-// use jquery switch class effect to change hour color for past, resent and future
-// consider jquery buttons to submit user data to local storage 
-// use bootstrap to build time blocks
+// used for day of week display
 var showCurrentDay = document.getElementById("showCurrentDay");
 var dayIndex = moment().day();
+// used for background color management
 var currentHour = moment().format("ha");
 var currentHourIndex = moment().hour();
 var nineAm = document.getElementById("nineAm");
@@ -17,18 +16,8 @@ var fivePm = document.getElementById("fivePm");
 
 
 
-
-var nineAmInput = document.querySelector("#nineAm");
-
-var userInput = {
-    nineAmInput: "banana"
-}
-
-
 // sets user input to local storage
-localStorage.setItem("userInput", JSON.stringify(userInput));
-
-
+// localStorage.setItem("nineAmValue", JSON.stringify(nineAM.value));
 
 
 // displays current day of week
@@ -57,7 +46,6 @@ function showDayOfWeek()
     } 
     showCurrentDay.textContent = todayIs;
 } showDayOfWeek()
-
 
 
 // sets background color based on time

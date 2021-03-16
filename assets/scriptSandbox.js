@@ -15,15 +15,14 @@ var threePm = document.getElementById("threePm");
 var fourPm = document.getElementById("fourPm"); 
 var fivePm = document.getElementById("fivePm"); 
 
-var nineAmInput = document.querySelector("#nineAm");
 
-var userInput = {
-    nineAmInput: "banana"
-}
+
+
+
 
 
 // sets user input to local storage
-localStorage.setItem("userInput", JSON.stringify(userInput));
+// localStorage.setItem("nineAmValue", JSON.stringify(nineAM.value));
 
 
 
@@ -142,4 +141,3 @@ function checkHour17() {
         fivePm.style.backgroundColor = "#AAAA"
     } else (fivePm.style.backgroundColor = "#84d23c")
 }; checkHour17() 
-

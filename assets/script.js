@@ -19,8 +19,6 @@ var fourPm = document.getElementById("fourPm");
 var fivePm = document.getElementById("fivePm"); 
 
 
-
-
 // pulls user data from local storage
 function getUserData () {
  nineAmLs = JSON.parse(localStorage.getItem("nineAmValue"));
@@ -33,6 +31,12 @@ function getUserData () {
  fourPmLs = JSON.parse(localStorage.getItem("fourPmValue"));
  fivePmLs = JSON.parse(localStorage.getItem("fivePmValue"));
 } getUserData()
+
+// // adds user data to page
+function addUserData (){
+    document.querySelector("#nineAm").textContent = "SomeText";
+} addUserData()
+
 
 // sends user data to local storage on click
 submitBtn.on('click', function () {    // sets user input to local storage   
@@ -56,8 +60,8 @@ submitBtn.on('click', function () {    // sets user input to local storage
     localStorage.setItem("threePmValue", JSON.stringify(threePmEl)); 
     localStorage.setItem("fourPmValue", JSON.stringify(fourPmEl)); 
     localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl));
-    });
 
+    });
 
 
 // displays current day of week

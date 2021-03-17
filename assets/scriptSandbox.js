@@ -19,6 +19,21 @@ var fourPm = document.getElementById("fourPm");
 var fivePm = document.getElementById("fivePm"); 
 
 
+
+
+// pulls user data from local storage
+function getUserData () {
+ nineAmLs = JSON.parse(localStorage.getItem("nineAmValue"));
+ tenAmLs = JSON.parse(localStorage.getItem("tenAmValue"));
+ elevenAmLs = JSON.parse(localStorage.getItem("elevenAmValue"));
+ twelvePmLs = JSON.parse(localStorage.getItem("twelvePmValue"));
+ onePmLs = JSON.parse(localStorage.getItem("onePmValue"));
+ twoPmLs = JSON.parse(localStorage.getItem("twoPmValue"));
+ threePmLs = JSON.parse(localStorage.getItem("threePmValue"));
+ fourPmLs = JSON.parse(localStorage.getItem("fourPmValue"));
+ fivePmLs = JSON.parse(localStorage.getItem("fivePmValue"));
+} getUserData()
+
 // sends user data to local storage on click
 submitBtn.on('click', function () {    // sets user input to local storage   
     var nineAmEl = $("#nineAm").val(); 
@@ -40,7 +55,7 @@ submitBtn.on('click', function () {    // sets user input to local storage
     localStorage.setItem("twoPmValue", JSON.stringify(twoPmEl)); 
     localStorage.setItem("threePmValue", JSON.stringify(threePmEl)); 
     localStorage.setItem("fourPmValue", JSON.stringify(fourPmEl)); 
-    localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl)); 
+    localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl));
     });
 
 

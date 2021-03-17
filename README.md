@@ -1,7 +1,7 @@
 # Work-Day-Scheduler
 
 
-This application provides a scheduler with color-coded time blocks to indicate past, present or future status of those time blocks.  User's input is saved to local storage by selecting the &#128274; icon.  User's last input is presented when the application is launched 
+This application provides a user-populated schedule with color-coded time blocks to indicate past, present or future status of those time blocks.  User's input is saved to local storage by selecting the &#128274; icon.  User's last input is presented when the application is launched or when the &#128274; icon has been selected.
 
 [Go to Work-Day-Scheduler](https://xr7tsi.github.io/Work-Day-Scheduler/)
 

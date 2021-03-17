@@ -21,15 +21,9 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
 .row {
   border-top: 1px solid rgb(255, 255, 255);
 }
-
-
 
 .softBtn {
   border-left: 0px solid black;
@@ -39,7 +33,15 @@ textarea{
   color: white;
 }
 
-.submitBtn i:hover {
+.softBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+.col-9 {
+  padding-right: 0px;
+}
+
+.col-2 {
+  padding-left: 0px;
 }

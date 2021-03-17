@@ -34,7 +34,16 @@ function getUserData () {
 
 // // adds user data to page
 function addUserData (){
-    document.querySelector("#nineAm").textContent = "SomeText";
+    document.querySelector("#nineAm").value = nineAmLs;
+    document.querySelector("#tenAm").value = tenAmLs;
+    document.querySelector("#elevenAm").value = elevenAmLs;
+    document.querySelector("#twelvePm").value = twelvePmLs;
+    document.querySelector("#onePm").value = onePmLs;
+    document.querySelector("#twoPm").value = twoPmLs;
+    document.querySelector("#threePm").value = threePmLs;
+    document.querySelector("#fourPm").value = fourPmLs;
+    document.querySelector("#fivePm").value = fivePmLs;
+
 } addUserData()
 
 

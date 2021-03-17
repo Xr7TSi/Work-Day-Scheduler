@@ -5,7 +5,7 @@ This application provides a scheduler with color-coded time blocks to indicate p
 
 [Go to Work-Day-Scheduler](https://xr7tsi.github.io/Work-Day-Scheduler/)
 
-![work day scheduler demo](./Work-Day-Scheduler/assets/Work-Day-Scheduler-Resize-img.png)
+![work day scheduler demo](./assets/Work-Day-Scheduler-Resize-img.png)
 
 ## License
 [MIT](MIT License

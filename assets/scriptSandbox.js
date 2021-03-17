@@ -1,6 +1,6 @@
 // used for day of week display
 var showCurrentDay = document.getElementById("showCurrentDay");
-var dayIndex = moment().day();
+var date = moment().format('dddd MMM Do');
 
 // gets submit button from html
 var submitBtn = $('.submitBtn');
@@ -19,6 +19,10 @@ var fourPm = document.getElementById("fourPm");
 var fivePm = document.getElementById("fivePm"); 
 
 
+// displays current date
+function showDayOfWeek() {
+ showCurrentDay.textContent = date;
+} showDayOfWeek()
 
 
 // pulls user data from local storage
@@ -34,6 +38,20 @@ function getUserData () {
  fivePmLs = JSON.parse(localStorage.getItem("fivePmValue"));
 } getUserData()
 
+// // adds user data to page on page load
+function addUserData (){
+    document.querySelector("#nineAm").value = nineAmLs;
+    document.querySelector("#tenAm").value = tenAmLs;
+    document.querySelector("#elevenAm").value = elevenAmLs;
+    document.querySelector("#twelvePm").value = twelvePmLs;
+    document.querySelector("#onePm").value = onePmLs;
+    document.querySelector("#twoPm").value = twoPmLs;
+    document.querySelector("#threePm").value = threePmLs;
+    document.querySelector("#fourPm").value = fourPmLs;
+    document.querySelector("#fivePm").value = fivePmLs;
+} addUserData()
+
+
 // sends user data to local storage on click
 submitBtn.on('click', function () {    // sets user input to local storage   
     var nineAmEl = $("#nineAm").val(); 
@@ -46,7 +64,6 @@ submitBtn.on('click', function () {    // sets user input to local storage
     var fourPmEl = $("#fourPm").val(); 
     var fivePmEl = $("#fivePm").val(); 
      
-
     localStorage.setItem("nineAmValue", JSON.stringify(nineAmEl));  
     localStorage.setItem("tenAmValue", JSON.stringify(tenAmEl));
     localStorage.setItem("elevenAmValue", JSON.stringify(elevenAmEl));
@@ -57,35 +74,6 @@ submitBtn.on('click', function () {    // sets user input to local storage
     localStorage.setItem("fourPmValue", JSON.stringify(fourPmEl)); 
     localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl));
     });
-
-
-
-// displays current day of week
-function showDayOfWeek()
- {
-    if (dayIndex = 0) {
-        todayIs = "Sunday"
-    } else
-    if (dayIndex = 1) {
-        todayIs = "Monday"
-    } else
-    if (dayIndex = 2) {
-        todayIs = "Tuesday"
-    } else
-    if (dayIndex = 3) {
-        todayIs = "Wednesday"
-    } else
-    if (dayIndex = 3) {
-        todayIs = "Thursday"
-    } else
-    if (dayIndex = 5) {
-        todayIs = "Friday"
-    } else
-    if (dayIndex = 6) {
-        todayIs = "Saturday"
-    } 
-    showCurrentDay.textContent = todayIs;
-} showDayOfWeek()
 
 
 // sets background color based on time
@@ -173,4 +161,3 @@ function checkHour17() {
         fivePm.style.backgroundColor = "#AAAA"
     } else (fivePm.style.backgroundColor = "#84d23c")
 }; checkHour17() 
-

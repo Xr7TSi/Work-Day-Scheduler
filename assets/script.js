@@ -1,6 +1,6 @@
 // used for day of week display
 var showCurrentDay = document.getElementById("showCurrentDay");
-var dayIndex = moment().day();
+var date = moment().format('dddd MMM Do');
 
 // gets submit button from html
 var submitBtn = $('.submitBtn');
@@ -19,6 +19,12 @@ var fourPm = document.getElementById("fourPm");
 var fivePm = document.getElementById("fivePm"); 
 
 
+// displays current date
+function showDayOfWeek() {
+ showCurrentDay.textContent = date;
+} showDayOfWeek()
+
+
 // pulls user data from local storage
 function getUserData () {
  nineAmLs = JSON.parse(localStorage.getItem("nineAmValue"));
@@ -32,7 +38,7 @@ function getUserData () {
  fivePmLs = JSON.parse(localStorage.getItem("fivePmValue"));
 } getUserData()
 
-// // adds user data to page
+// // adds user data to page on page load
 function addUserData (){
     document.querySelector("#nineAm").value = nineAmLs;
     document.querySelector("#tenAm").value = tenAmLs;
@@ -43,7 +49,6 @@ function addUserData (){
     document.querySelector("#threePm").value = threePmLs;
     document.querySelector("#fourPm").value = fourPmLs;
     document.querySelector("#fivePm").value = fivePmLs;
-
 } addUserData()
 
 
@@ -59,7 +64,6 @@ submitBtn.on('click', function () {    // sets user input to local storage
     var fourPmEl = $("#fourPm").val(); 
     var fivePmEl = $("#fivePm").val(); 
      
-
     localStorage.setItem("nineAmValue", JSON.stringify(nineAmEl));  
     localStorage.setItem("tenAmValue", JSON.stringify(tenAmEl));
     localStorage.setItem("elevenAmValue", JSON.stringify(elevenAmEl));
@@ -69,36 +73,7 @@ submitBtn.on('click', function () {    // sets user input to local storage
     localStorage.setItem("threePmValue", JSON.stringify(threePmEl)); 
     localStorage.setItem("fourPmValue", JSON.stringify(fourPmEl)); 
     localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl));
-
     });
-
-
-// displays current day of week
-function showDayOfWeek()
- {
-    if (dayIndex = 0) {
-        todayIs = "Sunday"
-    } else
-    if (dayIndex = 1) {
-        todayIs = "Monday"
-    } else
-    if (dayIndex = 2) {
-        todayIs = "Tuesday"
-    } else
-    if (dayIndex = 3) {
-        todayIs = "Wednesday"
-    } else
-    if (dayIndex = 3) {
-        todayIs = "Thursday"
-    } else
-    if (dayIndex = 5) {
-        todayIs = "Friday"
-    } else
-    if (dayIndex = 6) {
-        todayIs = "Saturday"
-    } 
-    showCurrentDay.textContent = todayIs;
-} showDayOfWeek()
 
 
 // sets background color based on time
@@ -108,83 +83,83 @@ function showDayOfWeek()
 
 function checkHour9() {
     if (currentHourIndex === 9) {
-        nineAm.style.backgroundColor = "#e97451"
+        nineAm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >9) {
-        nineAm.style.backgroundColor = "#AAAA"
-    } else (nineAm.style.backgroundColor = "#84d23c" )
+        nineAm.style.backgroundColor = "#d3d3d3"
+    } else (nineAm.style.backgroundColor = "#77dd77" )
 }; checkHour9() 
 
 function checkHour10() {
     if (currentHourIndex === 10) {
-        tenAm.style.backgroundColor = "#e97451"
+        tenAm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >10) {
-        tenAm.style.backgroundColor = "#AAAA"
-    } else (tenAm.style.backgroundColor = "#84d23c")
+        tenAm.style.backgroundColor = "#d3d3d3"
+    } else (tenAm.style.backgroundColor = "#77dd77")
 }; checkHour10() 
 
 function checkHour11() {
     if (currentHourIndex === 11) {
-        elevenAm.style.backgroundColor = "#e97451"
+        elevenAm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >11) {
-        elevenAm.style.backgroundColor = "#AAAA"
-    } else (elevenAm.style.backgroundColor = "#84d23c")
+        elevenAm.style.backgroundColor = "#d3d3d3"
+    } else (elevenAm.style.backgroundColor = "#77dd77")
 }; checkHour11() 
 
 function checkHour12() {
     if (currentHourIndex === 12) {
-        twelvePm.style.backgroundColor = "#e97451"
+        twelvePm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >12) {
-        twelvePm.style.backgroundColor = "#AAAA"
-    } else (twelvePm.style.backgroundColor = "#84d23c")
+        twelvePm.style.backgroundColor = "#d3d3d3"
+    } else (twelvePm.style.backgroundColor = "#77dd77")
 }; checkHour12() 
 
 function checkHour13() {
     if (currentHourIndex === 13) {
-        onePm.style.backgroundColor = "#e97451"
+        onePm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >13) {
-        onePm.style.backgroundColor = "#AAAA"
-    } else ( onePm.style.backgroundColor = "#84d23c")
+        onePm.style.backgroundColor = "#d3d3d3"
+    } else ( onePm.style.backgroundColor = "#77dd77")
 }; checkHour13() 
 
 function checkHour14() {
     if (currentHourIndex === 14) {
-        twoPm.style.backgroundColor = "#e97451"
+        twoPm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >14) {
-        twoPm.style.backgroundColor = "#AAAA"
-    } else (twoPm.style.backgroundColor = "#84d23c")
+        twoPm.style.backgroundColor = "#d3d3d3"
+    } else (twoPm.style.backgroundColor = "#77dd77")
 }; checkHour14() 
 
 function checkHour15() {
     if (currentHourIndex === 15) {
-        threePm.style.backgroundColor = "#e97451"
+        threePm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >15) {
-        threePm.style.backgroundColor = "#AAAA"
-    } else (threePm.style.backgroundColor = "#84d23c")
+        threePm.style.backgroundColor = "#d3d3d3"
+    } else (threePm.style.backgroundColor = "#77dd77")
 }; checkHour15() 
 
 function checkHour16() {
     if (currentHourIndex === 16) {
-        fourPm.style.backgroundColor = "#e97451"
+        fourPm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >16) {
-        fourPm.style.backgroundColor = "#AAAA"
-    } else (fourPm.style.backgroundColor = "#84d23c")
+        fourPm.style.backgroundColor = "#d3d3d3"
+    } else (fourPm.style.backgroundColor = "#77dd77")
 }; checkHour16() 
 
 function checkHour17() {
     if (currentHourIndex === 17) {
-        fivePm.style.backgroundColor = "#e97451"
+        fivePm.style.backgroundColor = "#ff6961"
     }  else 
     if (currentHourIndex >17) {
-        fivePm.style.backgroundColor = "#AAAA"
-    } else (fivePm.style.backgroundColor = "#84d23c")
+        fivePm.style.backgroundColor = "#d3d3d3"
+    } else (fivePm.style.backgroundColor = "#77dd77")
 }; checkHour17() 
 
 

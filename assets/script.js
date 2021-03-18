@@ -24,7 +24,6 @@ function showDayOfWeek() {
  showCurrentDay.textContent = date;
 } showDayOfWeek()
 
-
 // pulls user data from local storage
 function getUserData () {
  nineAmLs = JSON.parse(localStorage.getItem("nineAmValue"));
@@ -51,7 +50,6 @@ function addUserData (){
     document.querySelector("#fivePm").value = fivePmLs;
 } addUserData()
 
-
 // sends user data to local storage on click
 submitBtn.on('click', function () {    // sets user input to local storage   
     var nineAmEl = $("#nineAm").val(); 
@@ -74,7 +72,6 @@ submitBtn.on('click', function () {    // sets user input to local storage
     localStorage.setItem("fourPmValue", JSON.stringify(fourPmEl)); 
     localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl));
     });
-
 
 // sets background color based on time
 // "#e97451" Orange

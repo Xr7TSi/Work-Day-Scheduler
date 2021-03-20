@@ -1,6 +1,6 @@
 // used for day of week display
 var showCurrentDay = document.getElementById("showCurrentDay");
-var date = moment().format('dddd MMM Do');
+
 
 // gets submit button from html
 var submitBtn = $('.submitBtn');
@@ -18,10 +18,11 @@ var fourPm = document.getElementById("fourPm");
 var fivePm = document.getElementById("fivePm"); 
 
 
-// displays current date
-function showDayOfWeek() {
- showCurrentDay.textContent = date;
-} showDayOfWeek()
+// displays current date with clock
+setInterval(function(){ 
+var date = moment().format('MMMM Do YYYY, h:mm:ss a');
+showCurrentDay.textContent = date;
+});
 
 // pulls user data from local storage
 function getUserData () {
@@ -71,7 +72,6 @@ submitBtn.on('click', function () {    // sets user input to local storage
     localStorage.setItem("fourPmValue", JSON.stringify(fourPmEl)); 
     localStorage.setItem("fivePmValue", JSON.stringify(fivePmEl));
     });
-
 
 
 // ensures background color is updated while user has the app open
@@ -165,4 +165,3 @@ function checkHourReset() {
         }; checkHour17() 
     },100)
 } checkHourReset()
-

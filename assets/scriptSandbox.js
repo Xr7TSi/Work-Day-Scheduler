@@ -23,28 +23,30 @@ setInterval(function(){
 
 
 // pulls user data from local storage
-nineAmLs = JSON.parse(localStorage.getItem("nineAmValue"));
-tenAmLs = JSON.parse(localStorage.getItem("tenAmValue"));
-elevenAmLs = JSON.parse(localStorage.getItem("elevenAmValue"));
-twelvePmLs = JSON.parse(localStorage.getItem("twelvePmValue"));
-onePmLs = JSON.parse(localStorage.getItem("onePmValue"));
-twoPmLs = JSON.parse(localStorage.getItem("twoPmValue"));
-threePmLs = JSON.parse(localStorage.getItem("threePmValue"));
-fourPmLs = JSON.parse(localStorage.getItem("fourPmValue"));
-fivePmLs = JSON.parse(localStorage.getItem("fivePmValue"));
+function getUserData () {
+ nineAmLs = JSON.parse(localStorage.getItem("nineAmValue"));
+ tenAmLs = JSON.parse(localStorage.getItem("tenAmValue"));
+ elevenAmLs = JSON.parse(localStorage.getItem("elevenAmValue"));
+ twelvePmLs = JSON.parse(localStorage.getItem("twelvePmValue"));
+ onePmLs = JSON.parse(localStorage.getItem("onePmValue"));
+ twoPmLs = JSON.parse(localStorage.getItem("twoPmValue"));
+ threePmLs = JSON.parse(localStorage.getItem("threePmValue"));
+ fourPmLs = JSON.parse(localStorage.getItem("fourPmValue"));
+ fivePmLs = JSON.parse(localStorage.getItem("fivePmValue"));
+} getUserData()
 
-
-// adds user data to page on page load
-document.querySelector("#nineAm").value = nineAmLs;
-document.querySelector("#tenAm").value = tenAmLs;
-document.querySelector("#elevenAm").value = elevenAmLs;
-document.querySelector("#twelvePm").value = twelvePmLs;
-document.querySelector("#onePm").value = onePmLs;
-document.querySelector("#twoPm").value = twoPmLs;
-document.querySelector("#threePm").value = threePmLs;
-document.querySelector("#fourPm").value = fourPmLs;
-document.querySelector("#fivePm").value = fivePmLs;
-
+// // adds user data to page on page load
+function addUserData (){
+    document.querySelector("#nineAm").value = nineAmLs;
+    document.querySelector("#tenAm").value = tenAmLs;
+    document.querySelector("#elevenAm").value = elevenAmLs;
+    document.querySelector("#twelvePm").value = twelvePmLs;
+    document.querySelector("#onePm").value = onePmLs;
+    document.querySelector("#twoPm").value = twoPmLs;
+    document.querySelector("#threePm").value = threePmLs;
+    document.querySelector("#fourPm").value = fourPmLs;
+    document.querySelector("#fivePm").value = fivePmLs;
+} addUserData()
 
 // sends user data to local storage on click
 submitBtn.on('click', function () {    // sets user input to local storage   
@@ -159,7 +161,3 @@ setInterval(function(){
             } else (fivePm.style.backgroundColor = "#77dd77")
         }; checkHour17()   
        }}, 1000);
-
-
-       
-

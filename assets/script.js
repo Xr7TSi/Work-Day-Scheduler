@@ -1,12 +1,6 @@
 // used for day of week display
 var showCurrentDay = document.getElementById("showCurrentDay");
 
-
-// gets submit button from html
-var submitBtn = $('.submitBtn');
-
-// used for background color management
-var currentHourIndex = moment().hour();
 var nineAm = document.getElementById("nineAm");
 var tenAm = document.getElementById("tenAm");
 var elevenAm = document.getElementById("elevenAm"); 
@@ -16,6 +10,9 @@ var twoPm = document.getElementById("twoPm");
 var threePm = document.getElementById("threePm"); 
 var fourPm = document.getElementById("fourPm"); 
 var fivePm = document.getElementById("fivePm"); 
+
+// gets submit button from html
+var submitBtn = $('.submitBtn');
 
 
 // displays current date with clock
@@ -77,7 +74,8 @@ submitBtn.on('click', function () {    // sets user input to local storage
 
 // setInterval ensures background color is updated while user has the app open
 setInterval(function(){ 
-    
+    var currentHourIndex = moment().hour();
+   
         // sets background color based on time
         // "#e97451" Orange
         //  "#AAAA" Gray
@@ -161,8 +159,8 @@ setInterval(function(){
             if (currentHourIndex >17) {
                 fivePm.style.backgroundColor = "#d3d3d3"
             } else (fivePm.style.backgroundColor = "#77dd77")
-        }; checkHour17()        
-       }}, 100);
+        }; checkHour17()   
+       }}, 1000);
 
 
        

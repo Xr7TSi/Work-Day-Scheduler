@@ -6,7 +6,6 @@ var date = moment().format('dddd MMM Do');
 var submitBtn = $('.submitBtn');
 
 // used for background color management
-var currentHour = moment().format("ha");
 var currentHourIndex = moment().hour();
 var nineAm = document.getElementById("nineAm");
 var tenAm = document.getElementById("tenAm");
@@ -158,10 +157,3 @@ function checkHour17() {
         fivePm.style.backgroundColor = "#d3d3d3"
     } else (fivePm.style.backgroundColor = "#77dd77")
 }; checkHour17() 
-
-
-
-
-
-
-

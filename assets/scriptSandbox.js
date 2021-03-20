@@ -24,7 +24,6 @@ var date = moment().format('MMMM Do YYYY, h:mm:ss a');
 showCurrentDay.textContent = date;
 });
 
-
 // pulls user data from local storage
 function getUserData () {
  nineAmLs = JSON.parse(localStorage.getItem("nineAmValue"));
@@ -75,8 +74,10 @@ submitBtn.on('click', function () {    // sets user input to local storage
     });
 
 
-// setInterval ensures background color is updated while user has the app open
-setInterval(function(){ 
+// ensures background color is updated while user has the app open
+function checkHourReset() {
+
+    setInterval(function() {
 
         // sets background color based on time
         // "#e97451" Orange
@@ -89,8 +90,8 @@ setInterval(function(){
             if (currentHourIndex >9) {
                 nineAm.style.backgroundColor = "#d3d3d3"
             } else (nineAm.style.backgroundColor = "#77dd77" )
-            }; checkHour9() 
-            
+        }; checkHour9() 
+        
         function checkHour10() {
             if (currentHourIndex === 10) {
                 tenAm.style.backgroundColor = "#ff6961"
@@ -98,8 +99,8 @@ setInterval(function(){
             if (currentHourIndex >10) {
                 tenAm.style.backgroundColor = "#d3d3d3"
             } else (tenAm.style.backgroundColor = "#77dd77")
-            }; checkHour10() 
-            
+        }; checkHour10() 
+        
         function checkHour11() {
             if (currentHourIndex === 11) {
                 elevenAm.style.backgroundColor = "#ff6961"
@@ -107,8 +108,8 @@ setInterval(function(){
             if (currentHourIndex >11) {
                 elevenAm.style.backgroundColor = "#d3d3d3"
             } else (elevenAm.style.backgroundColor = "#77dd77")
-            }; checkHour11() 
-            
+        }; checkHour11() 
+        
         function checkHour12() {
             if (currentHourIndex === 12) {
                 twelvePm.style.backgroundColor = "#ff6961"
@@ -116,8 +117,8 @@ setInterval(function(){
             if (currentHourIndex >12) {
                 twelvePm.style.backgroundColor = "#d3d3d3"
             } else (twelvePm.style.backgroundColor = "#77dd77")
-            }; checkHour12() 
-            
+        }; checkHour12() 
+        
         function checkHour13() {
             if (currentHourIndex === 13) {
                 onePm.style.backgroundColor = "#ff6961"
@@ -125,17 +126,17 @@ setInterval(function(){
             if (currentHourIndex >13) {
                 onePm.style.backgroundColor = "#d3d3d3"
             } else ( onePm.style.backgroundColor = "#77dd77")
-            }; checkHour13() 
-            
+        }; checkHour13() 
+        
         function checkHour14() {
             if (currentHourIndex === 14) {
                 twoPm.style.backgroundColor = "#ff6961"
-                }  else 
+            }  else 
             if (currentHourIndex >14) {
                 twoPm.style.backgroundColor = "#d3d3d3"
             } else (twoPm.style.backgroundColor = "#77dd77")
-            }; checkHour14() 
-            
+        }; checkHour14() 
+        
         function checkHour15() {
             if (currentHourIndex === 15) {
                 threePm.style.backgroundColor = "#ff6961"
@@ -143,8 +144,8 @@ setInterval(function(){
             if (currentHourIndex >15) {
                 threePm.style.backgroundColor = "#d3d3d3"
             } else (threePm.style.backgroundColor = "#77dd77")
-            }; checkHour15() 
-            
+        }; checkHour15() 
+        
         function checkHour16() {
             if (currentHourIndex === 16) {
                 fourPm.style.backgroundColor = "#ff6961"
@@ -152,8 +153,8 @@ setInterval(function(){
             if (currentHourIndex >16) {
                 fourPm.style.backgroundColor = "#d3d3d3"
             } else (fourPm.style.backgroundColor = "#77dd77")
-            }; checkHour16() 
-            
+        }; checkHour16() 
+        
         function checkHour17() {
             if (currentHourIndex === 17) {
                 fivePm.style.backgroundColor = "#ff6961"
@@ -161,6 +162,6 @@ setInterval(function(){
             if (currentHourIndex >17) {
                 fivePm.style.backgroundColor = "#d3d3d3"
             } else (fivePm.style.backgroundColor = "#77dd77")
-        }; checkHour17()        
-       });
-
+        }; checkHour17() 
+    },100)
+} checkHourReset()

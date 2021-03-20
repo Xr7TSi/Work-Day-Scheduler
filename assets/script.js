@@ -19,9 +19,9 @@ var fivePm = document.getElementById("fivePm");
 
 
 // displays current date with clock
-setInterval(function(){ 
-var date = moment().format('MMMM Do YYYY, h:mm:ss a');
-showCurrentDay.textContent = date;
+setInterval(function(){
+    var date = moment().format('MMMM Do YYYY, h:mm:ss a');
+    showCurrentDay.textContent = date;
 });
 
 
@@ -77,12 +77,12 @@ submitBtn.on('click', function () {    // sets user input to local storage
 
 // setInterval ensures background color is updated while user has the app open
 setInterval(function(){ 
-
+    
         // sets background color based on time
         // "#e97451" Orange
         //  "#AAAA" Gray
         // "#84d23c" Green
-        function checkHour9() {
+        {function checkHour9() {
             if (currentHourIndex === 9) {
                 nineAm.style.backgroundColor = "#ff6961"
             }  else 
@@ -162,5 +162,8 @@ setInterval(function(){
                 fivePm.style.backgroundColor = "#d3d3d3"
             } else (fivePm.style.backgroundColor = "#77dd77")
         }; checkHour17()        
-       });
+       }}, 100);
+
+
+       
 

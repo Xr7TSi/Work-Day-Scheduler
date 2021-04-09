@@ -1,4 +1,4 @@
-# Work-Day-Scheduler
+# Workday-Scheduler
 
 
 Workday Scheduler is a user-populated schedule with color-coded time blocks to indicate past, present or future status of those time blocks.  

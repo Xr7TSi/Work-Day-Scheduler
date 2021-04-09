@@ -1,11 +1,15 @@
 # Work-Day-Scheduler
 
 
-This application provides a user-populated schedule with color-coded time blocks to indicate past, present or future status of those time blocks.  User's input is saved to local storage by selecting the &#128274; icon.  User's last input is presented when the application is launched or when the &#128274; icon has been selected.
+Workday Scheduler is a user-populated schedule with color-coded time blocks to indicate past, present or future status of those time blocks.  
+
+The user's schedule items are saved to local storage by selecting the &#128274; icon.  The user's current schedule is presented when the application is launched or when the &#128274; icon has been selected.
+
+Workday Scheduler uses JavaScript, HTML, CSS, Moment and Local Storage
 
 [Go to Work-Day-Scheduler](https://xr7tsi.github.io/Work-Day-Scheduler/)
 
-![work day scheduler demo](./assets/Work-Day-Scheduler-Resize-img.png)
+![work day scheduler demo](./assets/Workday-Scheduler.png)
 
 ## License
 [MIT](MIT License

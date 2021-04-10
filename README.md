@@ -7,9 +7,12 @@ The user's schedule items are saved to local storage by selecting the &#128274; 
 
 Workday Scheduler uses JavaScript, HTML, CSS, Moment and Local Storage
 
-[Go to Work-Day-Scheduler](https://xr7tsi.github.io/Work-Day-Scheduler/)
+[Go to Work-Day-Scheduler](https://xr7tsi.github.io/Workday-Scheduler/)
 
-![work day scheduler demo](./assets/Workday-Scheduler.png)
+![work day scheduler demo](./assets/Workday-Scheduler-resize.png)
+![work day scheduler demo](./assets/Workday-Scheduler2-resize.png)
+
+Created by Jonathan Rein https://github.com/Xr7TSi
 
 ## License
 [MIT](MIT License
